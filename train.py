@@ -21,7 +21,7 @@ os.makedirs(os.path.dirname(weight_path), exist_ok=True)
 
 
 batch_size = 1
-num_epochs = 20
+num_epochs = 15
 lr = 0.0005
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -60,6 +60,6 @@ for epoch in range(num_epochs):
     img = torch.stack([_image, _tgt_image, _out_image], dim=0)
     save_image(img, os.path.join(save_path, f'epoch{epoch}.png'), normalize=True)
     
-# 保存模型
-torch.save(model.state_dict(), weight_path)
-print(f"模型已保存为 {weight_path}")
+    # 保存模型
+    torch.save(model.state_dict(), weight_path)
+    print(f"模型已保存为 {weight_path}")
