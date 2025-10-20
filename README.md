@@ -11,7 +11,7 @@ tqdm </br>
 
 ### 使用说明
 data: 存放图片数据 </br>
-weights: 保存模型 </br>
+weights: 保存模型 (文件大小超过限制了,没上传)</br>
 train_image: 保存每轮训练结果, 噪声图、原图、去噪结果, 拼接形成的图片 </br>
 dataset.py: 数据集加载方式 </br>
 model.py: 模型结构 </br>
